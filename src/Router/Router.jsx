@@ -1,7 +1,7 @@
 import React from 'react';
 import { createBrowserRouter } from 'react-router';
 import MainLayout from '../MainLayout/MainLayout';
-import HomePage from '../Pages/HomePage';
+import HomePage from '../Pages/HomePage/HomePage';
 import TimeLine from '../Pages/TimeLine';
 import Stats from '../Pages/Stats';
 import FriendsDetails from '../Pages/FriendsDetails';
