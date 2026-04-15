@@ -7,7 +7,7 @@ const Banner = () => {
                 Friends to keep close in your life
             </h1>
             
-            <p className="text-slate-500 max-w-2xl mb-10 text-sm md:text-base leading-relaxed">
+            <p className="text-slate-500 max-w-[600px] mb-10 text-sm md:text-base leading-relaxed">
                 Your personal shelf of meaningful connections. Browse, tend, and nurture the 
                 relationships that matter most.
             </p>
