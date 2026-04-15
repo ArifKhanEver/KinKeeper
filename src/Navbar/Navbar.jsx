@@ -5,8 +5,8 @@ import logo from '../assets/logo.png'
 
 const Navbar = () => {
   return (
-    <div className="border-b border-gray-200">
-        <nav className="container mx-auto flex items-center justify-between px-12 py-4 bg-white ">
+    <nav className="border-b border-gray-200">
+        <div className="container mx-auto flex items-center justify-between px-12 py-4 bg-white ">
             <div className="text-xl font-bold text-slate-800">
                 <img src={logo} alt="KeenKeeper" />
             </div>
@@ -91,8 +91,8 @@ const Navbar = () => {
                     </ul>
                 </div>
             </div>
-        </nav>
-    </div>
+        </div>
+    </nav>
   );
 };
 
