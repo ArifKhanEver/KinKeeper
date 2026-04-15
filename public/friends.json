@@ -1,0 +1,152 @@
+[
+  {
+    "id": 1,
+    "name": "Arif Ahmed",
+    "picture": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=200&h=200&auto=format&fit=crop",
+    "email": "arif.ahmed@email.com",
+    "days_since_contact": 5,
+    "status": "healthy",
+    "tags": [
+      "childhood",
+      "dhaka"
+    ],
+    "bio": "Grew up in the same neighborhood. Enthusiastic about cricket and photography.",
+    "goal": 15,
+    "next_due_date": "2025-04-25"
+  },
+  {
+    "id": 2,
+    "name": "Sarah Jenkins",
+    "picture": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=200&h=200&auto=format&fit=crop",
+    "email": "s.jenkins@workmail.com",
+    "days_since_contact": 20,
+    "status": "overdue",
+    "tags": [
+      "office",
+      "mentor"
+    ],
+    "bio": "Former senior dev at my first company. Great at giving career advice and code reviews.",
+    "goal": 14,
+    "next_due_date": "2025-04-10"
+  },
+  {
+    "id": 3,
+    "name": "Tanvir Rahman",
+    "picture": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=200&h=200&auto=format&fit=crop",
+    "email": "tanvir.mern@dev.io",
+    "days_since_contact": 2,
+    "status": "healthy",
+    "tags": [
+      "dev-community",
+      "tech-talk"
+    ],
+    "bio": "MERN stack buddy. We often brainstorm about scalable system architectures.",
+    "goal": 7,
+    "next_due_date": "2025-04-20"
+  },
+  {
+    "id": 4,
+    "name": "Elena Rodriguez",
+    "picture": "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?q=80&w=200&h=200&auto=format&fit=crop",
+    "email": "elena.rod@travels.com",
+    "days_since_contact": 45,
+    "status": "overdue",
+    "tags": [
+      "travel",
+      "college"
+    ],
+    "bio": "Met during a semester abroad in Spain. She shares my love for minimalist design.",
+    "goal": 30,
+    "next_due_date": "2025-03-31"
+  },
+  {
+    "id": 5,
+    "name": "Nabil Hassan",
+    "picture": "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?q=80&w=200&h=200&auto=format&fit=crop",
+    "email": "nabil.h@startup.com",
+    "days_since_contact": 10,
+    "status": "warning",
+    "tags": [
+      "business",
+      "gym"
+    ],
+    "bio": "Entrepreneur friend from Dhaka. We usually catch up during weekend gym sessions.",
+    "goal": 10,
+    "next_due_date": "2025-04-15"
+  },
+  {
+    "id": 6,
+    "name": "Emily Chen",
+    "picture": "https://images.unsplash.com/photo-1517841905240-472988babdf9?q=80&w=200&h=200&auto=format&fit=crop",
+    "email": "emily.chen@lit.edu",
+    "days_since_contact": 60,
+    "status": "overdue",
+    "tags": [
+      "literature",
+      "university"
+    ],
+    "bio": "Fellow English Lit graduate. We can talk about classic novels for hours.",
+    "goal": 45,
+    "next_due_date": "2025-02-28"
+  },
+  {
+    "id": 7,
+    "name": "Liam O'Connor",
+    "picture": "https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?q=80&w=200&h=200&auto=format&fit=crop",
+    "email": "liam.oc@freelance.net",
+    "days_since_contact": 3,
+    "status": "healthy",
+    "tags": [
+      "gaming",
+      "discord"
+    ],
+    "bio": "Online friend I play RPGs with. Very skilled in logic and problem solving.",
+    "goal": 7,
+    "next_due_date": "2025-04-19"
+  },
+  {
+    "id": 8,
+    "name": "Anika Tabassum",
+    "picture": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=200&h=200&auto=format&fit=crop",
+    "email": "anika.t@volunteering.org",
+    "days_since_contact": 18,
+    "status": "warning",
+    "tags": [
+      "volunteer",
+      "school"
+    ],
+    "bio": "Met while coordinating educational programs. Very dedicated to social work.",
+    "goal": 20,
+    "next_due_date": "2025-04-17"
+  },
+  {
+    "id": 9,
+    "name": "Marcus Aurelius",
+    "picture": "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?q=80&w=200&h=200&auto=format&fit=crop",
+    "email": "marcus.a@philosophy.com",
+    "days_since_contact": 90,
+    "status": "overdue",
+    "tags": [
+      "philosophy",
+      "mentor"
+    ],
+    "bio": "An older friend who introduced me to Stoicism. His perspective is very grounded.",
+    "goal": 60,
+    "next_due_date": "2025-03-15"
+  },
+  {
+    "id": 10,
+    "name": "Ziaul Haque",
+    "picture": "https://images.unsplash.com/photo-1521119954732-81256a38755a?q=80&w=200&h=200&auto=format&fit=crop",
+    "email": "ziaul.h@agency.com",
+    "days_since_contact": 1,
+    "status": "healthy",
+    "tags": [
+      "agency",
+      "close friend"
+    ],
+    "bio": "Collaborator at Dev Wonder. We share a mission for building scalable web apps.",
+    "goal": 5,
+    "next_due_date": "2025-04-16"
+  }
+]
