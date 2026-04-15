@@ -1,11 +1,11 @@
 import React from 'react';
-import Banner from './Banner';
+import Hero from './Hero';
 import AllFriends from './AllFriends';
 
 const HomePage = () => {
     return (
         <div>
-            <Banner></Banner>
+            <Hero></Hero>
             <AllFriends></AllFriends>
         </div>
     );
