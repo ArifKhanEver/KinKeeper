@@ -1,5 +1,6 @@
 import React, { Children, useEffect, useState } from 'react';
 import { MyContext } from './FriendsContext';
+import { Flip, toast } from 'react-toastify';
 
 const ContextProvide = ({children}) => {
     const [AllFriendsData, setAllFriendsData] = useState([])
@@ -15,13 +16,16 @@ const ContextProvide = ({children}) => {
 
         const newActivityData = [updatedData, ...activityData]
         setActivityData(newActivityData)
+        toast.success(`You called to ${data.name}`,{theme:"colored",transition:Flip})
+
     }
 
     const handleText= (data)=> {
         const updatedData = {...data, activity: "Text", calledTimeAt: new Date().toLocaleTimeString(), calledDateAt: new Date().toLocaleDateString('en-US',{year:'numeric', month:'long',day:'numeric'})};
         
         const newActivityData = [updatedData, ...activityData]
-        setActivityData(newActivityData)
+        setActivityData(newActivityData);
+        toast.success(`You texted to ${data.name}`,{theme:"colored",transition:Flip})
     }
 
     const handleVideo = (data)=> {
@@ -29,6 +33,8 @@ const ContextProvide = ({children}) => {
         
         const newActivityData = [updatedData, ...activityData]
         setActivityData(newActivityData)
+        toast.success(`You video called to ${data.name}`,{theme:"colored",transition:Flip})
+
     }
 
 

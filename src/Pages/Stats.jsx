@@ -1,12 +1,24 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Pie, PieChart,Cell, ResponsiveContainer, Tooltip } from 'recharts';
+import { MyContext } from '../FriendsContext/FriendsContext';
 
-const data = [
-    {name:"Text", value:10, fill:'#7f37f5'},
-    {name:"Call", value:8, fill:'#244d3f'},
-    {name:"Video", value:7, fill:'#37a163'}
-]
+
 const Stats = () => {
+
+    const {activityData} = useContext(MyContext);
+
+
+    const calls = activityData.filter(data=> data.activity =="Call");
+    const texts = activityData.filter(data=> data.activity =="Text");
+    const videos = activityData.filter(data=> data.activity =="Video");
+    console.log('calls',calls, 'text',`${texts.length}`,'videos',videos)
+
+    const data = [
+    {name:"Call", value:calls.length, fill:'#7f37f5'},
+    {name:"Text", value:texts.length, fill:'#244d3f'},
+    {name:"Video", value:videos.length, fill:'#37a163'}
+]
+
     return (
         <div className='bg-gray-50'>
 
@@ -22,6 +34,8 @@ const Stats = () => {
                     </h2>
 
                     <div className='w-full h-[250px]'>
+                        {
+                            calls.length === 0 && texts.length === 0 && videos.length === 0? <h2 className='text-2xl font-bold grid place-content-center h-[30vh]'>Add Some activity</h2>:
                         <ResponsiveContainer width="100%" height="100%">
                             <PieChart>
                                 <Pie
@@ -43,11 +57,12 @@ const Stats = () => {
                                 />
                             </PieChart>
                         </ResponsiveContainer>
+                        }
                     </div>
                     
                     <div className="flex gap-6 mt-8 mx-auto">
-                        {data.map((item) => (
-                        <div key={item.name} className="flex items-center gap-2">
+                        {data.map((item,index) => (
+                        <div key={index} className="flex items-center gap-2">
                             <div className="w-3 h-3 rounded-full" style={{ backgroundColor: item.fill }}></div>
                             <span className="text-sm font-medium text-slate-600">{item.name}</span>
                         </div>
