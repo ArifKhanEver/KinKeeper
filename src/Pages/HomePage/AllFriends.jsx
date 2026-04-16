@@ -1,28 +1,42 @@
-import React from 'react';
+import React, { Suspense, useEffect, useState } from 'react';
 import FriendCard from './FriendCard';
+import { MoonLoader } from 'react-spinners';
 
 const AllFriends = () => {
+    const [friends, setFriends] = useState([]);
+    const [loading, setLoading] = useState(true)
+
+useEffect(()=>{
+    fetch('/friends.json').then(res=>res.json()).then(data=>{
+        setFriends(data);
+        setLoading(false);
+    }
+    )
+},[])
+
+console.log(friends)
+
     return (
-        <div className="container mx-auto min-h-screen px-8">
+        <div className="container mx-auto min-h-screen px-8 pb-20">
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12 border-b-1 border-gray-200 pb-14">
                 <div className="bg-white rounded-xl p-8 shadow-sm border border-gray-100 flex flex-col items-center justify-center text-center">
-                    <span className="text-[32px] font-semibold text-slate-800 mb-2">10</span>
-                    <span className="text-[18px] text-slate-500 tracking-wider">Total Friends</span>
+                    <span className="text-[32px] font-semibold text-slate-800 mb-2">{friends.length}</span>
+                    <span className="text-[18px] text-slate-500">Total Friends</span>
                 </div>
 
                 <div className="bg-white rounded-xl p-8 shadow-sm border border-gray-100 flex flex-col items-center justify-center text-center">
                     <span className="text-[32px] font-semibold text-slate-800 mb-2">3</span>
-                    <span className="text-[18px] text-slate-500 tracking-wider">On Track</span>
+                    <span className="text-[18px] text-slate-500">On Track</span>
                 </div>
 
                 <div className="bg-white rounded-xl p-8 shadow-sm border border-gray-100 flex flex-col items-center justify-center text-center">
                     <span className="text-[32px] font-semibold text-slate-800 mb-2">6</span>
-                    <span className="text-[18px] text-slate-500 tracking-wider">Need Attention</span>
+                    <span className="text-[18px] text-slate-500">Need Attention</span>
                 </div>
 
                 <div className="bg-white rounded-xl p-8 shadow-sm border border-gray-100 flex flex-col items-center justify-center text-center">
                     <span className="text-[32px] font-semibold text-slate-800 mb-2">12</span>
-                    <span className="text-[18px] text-slate-500 tracking-wider">Interactions This Month</span>
+                    <span className="text-[18px] text-slate-500">Interactions This Month</span>
                 </div>
             </div>
 
@@ -30,8 +44,12 @@ const AllFriends = () => {
                 <h2 className="text-2xl font-bold text-slate-800">Your Friends</h2>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-                <FriendCard></FriendCard>
+            <div>
+                    {
+                        loading? <div className='flex justify-center items-center h-[30vh]'><MoonLoader /></div> :(<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 place-content-center">{
+                        friends.map((friend,index)=><FriendCard key={index} friend={friend}></FriendCard>)}</div>)
+                        
+                    }
 
             </div>
         </div>
