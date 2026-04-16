@@ -1,15 +1,15 @@
-# 👥 KeenKeeper — Keep Your Friendships Alive
+# KinKeeper — Keep Your Friendships Alive
 
-**KeenKeeper** is a modern personal relationship management tool designed to help you nurture and maintain your friendships. In a fast-paced digital world, it’s easy to lose track of time. KeenKeeper ensures you stay connected with the people who matter most by tracking interactions and setting contact goals.
+**KinKeeper** is a modern personal relationship management tool designed to help you nurture and maintain your friendships. In a fast-paced digital world, it’s easy to lose track of time. KinKeeper ensures you stay connected with the people who matter most by tracking interactions and setting contact goals.
 
 ---
 
-## 🚀 Live Demo
+## Live Demo
 Live link: https://kin-keeper-app.netlify.app/
 
 ---
 
-## 🛠️ Technologies Used
+## Technologies Used
 * **React.js** (Frontend Library)
 * **React Router DOM** (Navigation & Routing)
 * **Tailwind CSS** (Styling & Responsiveness)
@@ -20,20 +20,20 @@ Live link: https://kin-keeper-app.netlify.app/
 
 ---
 
-## ✨ Key Features
+## Key Features
 
-### 1. 🎯 Dynamic Friendship Dashboard
+### 1. Dynamic Friendship Dashboard
 A clean, minimalist home page featuring a banner with interaction summaries (Total Friends, Overdue, etc.) and a 4-column grid layout for friend profiles. Each card dynamically displays friendship status (**Overdue**, **Almost Due**, or **On-Track**) with color-coded alerts based on the Figma design.
 
-### 2. ⚡ Real-time Interaction Logging
+### 2. Real-time Interaction Logging
 Inside the **Friend Details Page**, users can log instant check-ins via Call, Text, or Video buttons. Every interaction is automatically timestamped and added to the global timeline, accompanied by sleek toast notifications for immediate feedback.
 
-### 3. 📊 Friendship Analytics & Filtering
+### 3. Friendship Analytics & Filtering
 A dedicated **Stats Page** featuring interactive Pie Charts (powered by Recharts) to visualize the balance between different interaction types. Additionally, the **Timeline Page** includes a robust filtering system, allowing users to drill down into specific interaction histories (e.g., only viewing "Video Calls").
 
 ---
 
-## 📸 Screen Previews
+## Screen Previews
 * **Home:** Banner with summary stats and friend cards.
 * **Details:** Two-column layout with friend info, relationship goals, and quick actions.
 * **Timeline:** Chronological history of all logged check-ins.
@@ -41,11 +41,11 @@ A dedicated **Stats Page** featuring interactive Pie Charts (powered by Recharts
 
 ---
 
-## 📦 Installation & Setup
+## Installation & Setup
 
 1. **Clone the repository:**
    ```bash
-   git clone [https://github.com/your-username/keenkeeper.git](https://github.com/your-username/keenkeeper.git)
+   git clone https://github.com/ArifKhanEver/KinKeeper
 
 2. **Navigate to the project directory:**
    ```bash
