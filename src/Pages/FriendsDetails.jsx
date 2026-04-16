@@ -1,23 +1,26 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { useLoaderData, useParams } from 'react-router';
 import { RiDeleteBinLine } from "react-icons/ri";
 import { PiBellSimpleZ } from "react-icons/pi";
 import { FiArchive } from "react-icons/fi";
-import { PiPhoneCallBold } from "react-icons/pi";import text from '../assets/text.png';
+import { PiPhoneCallBold } from "react-icons/pi";
 import { LuMessageSquareMore } from "react-icons/lu";
 import { PiVideoCamera } from "react-icons/pi";
+import { MyContext } from '../FriendsContext/FriendsContext';
 
 const FriendsDetails = () => {
     const {Id} = useParams();
     const friends = useLoaderData();
 
     const clickedFriend = friends.find(friend => friend.id == Id);
-    const {name,picture, email, days_since_contact,status,tags,bio,goal,next_due_date} = clickedFriend;
+    const { name,picture, email, days_since_contact,status,tags,bio,goal,next_due_date} = clickedFriend;
+
+    const {handleCall,handleText,handleVideo} =useContext(MyContext);
 
     return (
         <div className='bg-gray-50'>
             
-            <div className="max-w-4xl mx-auto py-[80px]  font-sans min-h-screen">
+            <div className="max-w-[90%] md:max-w-4xl mx-auto py-[80px]  font-sans min-h-screen">
                 <div className="grid grid-cols-1 md:grid-cols-12 gap-6">
                     
                     <div className="md:col-span-4 flex flex-col gap-4">
@@ -34,7 +37,7 @@ const FriendsDetails = () => {
 
                             <div className="flex gap-2 my-3">
                                 {
-                                    tags.map(tag=><span className="px-3 py-1 bg-green-100 text-green-700 text-[12px] font-bold rounded-full capitalize tracking-wide">{tag}</span>)
+                                    tags.map((tag,index)=><span key={index} className="px-3 py-1 bg-green-100 text-green-700 text-[12px] font-bold rounded-full capitalize tracking-wide">{tag}</span>)
                                 }
                                 
                             </div>
@@ -94,21 +97,21 @@ const FriendsDetails = () => {
                             <h3 className="text-emerald-950 font-bold text-xl mb-6 text-[12px]">Quick Check-In</h3>
                             <div className="grid grid-cols-3 gap-4">
         
-                                <button className="bg-gray-50 p-6 rounded-xl border border-gray-100 flex flex-col items-center hover:border-emerald-500 hover:shadow-md transition-all active:scale-95 group">
+                                <button onClick={()=>handleCall(clickedFriend)} className="bg-gray-50 p-6 rounded-xl border border-gray-100 flex flex-col items-center hover:border-emerald-500 hover:shadow-md transition-all active:scale-95 group">
                                     <span className="text-2xl mb-2 group-hover:scale-110 transition-transform">
                                         <PiPhoneCallBold />
                                     </span>
                                     <span className="text-xs font-semibold text-slate-600 uppercase tracking-wide">Call</span>
                                 </button>
 
-                                <button className="bg-gray-50 p-6 rounded-xl border border-gray-100 flex flex-col items-center hover:border-emerald-500 hover:shadow-md transition-all active:scale-95 group">
+                                <button onClick={()=>handleText(clickedFriend)} className="bg-gray-50 p-6 rounded-xl border border-gray-100 flex flex-col items-center hover:border-emerald-500 hover:shadow-md transition-all active:scale-95 group">
                                     <span className="text-2xl mb-2 group-hover:scale-110 transition-transform">
                                         <LuMessageSquareMore />
                                     </span>
                                     <span className="text-xs font-semibold text-slate-600 uppercase tracking-wide">Text</span>
                                 </button>
 
-                                <button className="bg-gray-50 p-6 rounded-xl border border-gray-100 flex flex-col items-center hover:border-emerald-500 hover:shadow-md transition-all active:scale-95 group">
+                                <button onClick={()=>handleVideo(clickedFriend)} className="bg-gray-50 p-6 rounded-xl border border-gray-100 flex flex-col items-center hover:border-emerald-500 hover:shadow-md transition-all active:scale-95 group">
                                     <span className="text-2xl mb-2 group-hover:scale-110 transition-transform">
                                         <PiVideoCamera />
                                     </span>

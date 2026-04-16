@@ -1,9 +1,61 @@
 import React from 'react';
+import { Pie, PieChart,Cell, ResponsiveContainer, Tooltip } from 'recharts';
 
+const data = [
+    {name:"Text", value:10, fill:'#7f37f5'},
+    {name:"Call", value:8, fill:'#244d3f'},
+    {name:"Video", value:7, fill:'#37a163'}
+]
 const Stats = () => {
     return (
-        <div>
-            This is Stats. 
+        <div className='bg-gray-50'>
+
+            <div className='flex flex-col items-center justify-center max-w-[90%] md:max-w-[70%] mx-auto py-14 min-h-screen'>
+                <h1 className='text-4xl md:text-5xl font-bold mb-10 text-slate-800 tracking-tight'>
+                    Friendship Analytics
+                </h1>
+                
+
+                <div className='bg-white flex flex-col justify-center w-full p-8 rounded-xl space-y-6'>
+                    <h2 className='text-[18px] font-medium'>
+                        By Interaction Type
+                    </h2>
+
+                    <div className='w-full h-[250px]'>
+                        <ResponsiveContainer width="100%" height="100%">
+                            <PieChart>
+                                <Pie
+                                data={data}
+                                innerRadius="70%"
+                                outerRadius="90%"
+                                cornerRadius={40}
+                                paddingAngle={8}
+                                dataKey="value"
+                                stroke="none"
+                                >
+                                {
+                                data.map((entry, index) => (
+                                    <Cell key={`cell-${index}`} fill={entry.fill} />
+                                ))
+                                }
+                                </Pie>
+                                <Tooltip contentStyle={{ borderRadius: '10px', border: 'none', boxShadow: '0 4px 6px -1px rgb(0 0 0 / 0.1)' }}
+                                />
+                            </PieChart>
+                        </ResponsiveContainer>
+                    </div>
+                    
+                    <div className="flex gap-6 mt-8 mx-auto">
+                        {data.map((item) => (
+                        <div key={item.name} className="flex items-center gap-2">
+                            <div className="w-3 h-3 rounded-full" style={{ backgroundColor: item.fill }}></div>
+                            <span className="text-sm font-medium text-slate-600">{item.name}</span>
+                        </div>
+                        ))}
+                    </div>
+                </div>
+            </div>
+
         </div>
     );
 };

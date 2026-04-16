@@ -65,7 +65,7 @@
     "picture": "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?q=80&w=200&h=200&auto=format&fit=crop",
     "email": "nabil.h@startup.com",
     "days_since_contact": 10,
-    "status": "Warning",
+    "status": "Almost Due",
     "tags": [
       "business",
       "gym"
@@ -110,7 +110,7 @@
     "picture": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=200&h=200&auto=format&fit=crop",
     "email": "anika.t@volunteering.org",
     "days_since_contact": 18,
-    "status": "Warning",
+    "status": "Almost Due",
     "tags": [
       "volunteer",
       "school"
