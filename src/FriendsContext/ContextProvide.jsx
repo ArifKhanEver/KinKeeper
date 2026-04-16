@@ -16,7 +16,7 @@ const ContextProvide = ({children}) => {
 
         const newActivityData = [updatedData, ...activityData]
         setActivityData(newActivityData)
-        toast.success(`You called to ${data.name}`,{theme:"colored",transition:Flip})
+        toast.success(`You called to ${data.name}`,{position:'bottom-right',theme:"colored",transition:Flip})
 
     }
 
@@ -25,7 +25,7 @@ const ContextProvide = ({children}) => {
         
         const newActivityData = [updatedData, ...activityData]
         setActivityData(newActivityData);
-        toast.success(`You texted to ${data.name}`,{theme:"colored",transition:Flip})
+        toast.success(`You texted to ${data.name}`,{position:'bottom-right',theme:"colored",transition:Flip})
     }
 
     const handleVideo = (data)=> {
@@ -33,7 +33,7 @@ const ContextProvide = ({children}) => {
         
         const newActivityData = [updatedData, ...activityData]
         setActivityData(newActivityData)
-        toast.success(`You video called to ${data.name}`,{theme:"colored",transition:Flip})
+        toast.success(`You video called to ${data.name}`,{position:'bottom-right',theme:"colored",transition:Flip})
 
     }
 
