@@ -22,7 +22,7 @@ const Stats = () => {
     return (
         <div className='bg-gray-50'>
 
-            <div className='flex flex-col items-center justify-center max-w-[90%] md:max-w-[70%] mx-auto py-14 min-h-screen'>
+            <div className='flex flex-col items-center justify-center max-w-[90%] md:max-w-[70%] mx-auto py-8 md:py-14 min-h-screen'>
                 <h1 className='text-4xl md:text-5xl font-bold mb-10 text-slate-800 tracking-tight'>
                     Friendship Analytics
                 </h1>
@@ -64,7 +64,7 @@ const Stats = () => {
                         {data.map((item,index) => (
                         <div key={index} className="flex items-center gap-2">
                             <div className="w-3 h-3 rounded-full" style={{ backgroundColor: item.fill }}></div>
-                            <span className="text-sm font-medium text-slate-600">{item.name}</span>
+                            <span className="text-sm font-medium text-slate-600">{item.name}: {item.value}</span>
                         </div>
                         ))}
                     </div>

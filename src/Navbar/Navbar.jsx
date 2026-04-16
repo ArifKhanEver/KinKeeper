@@ -1,4 +1,4 @@
-import { NavLink } from "react-router";
+import { Link, NavLink } from "react-router";
 import { HiOutlineHome, HiOutlineClock } from "react-icons/hi";
 import { GoGraph } from "react-icons/go";
 import logo from '../assets/logo.png'
@@ -7,9 +7,9 @@ const Navbar = () => {
   return (
     <nav className="border-b border-gray-200">
         <div className="container mx-auto flex items-center justify-between px-12 py-4 bg-white ">
-            <div className="text-xl font-bold text-slate-800">
+            <Link to={'/'} className="text-xl font-bold text-slate-800">
                 <img src={logo} alt="KeenKeeper" />
-            </div>
+            </Link>
 
             <div className="hidden md:block">
                 <div className="flex items-center gap-4">

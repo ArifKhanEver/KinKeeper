@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import { useLoaderData, useParams } from 'react-router';
 import { RiDeleteBinLine } from "react-icons/ri";
 import { PiBellSimpleZ } from "react-icons/pi";
@@ -8,9 +8,11 @@ import { LuMessageSquareMore } from "react-icons/lu";
 import { PiVideoCamera } from "react-icons/pi";
 import { MyContext } from '../FriendsContext/FriendsContext';
 
+
 const FriendsDetails = () => {
     const {Id} = useParams();
     const friends = useLoaderData();
+
 
     const clickedFriend = friends.find(friend => friend.id == Id);
     const { name,picture, email, days_since_contact,status,tags,bio,goal,next_due_date} = clickedFriend;
