@@ -7,8 +7,8 @@ const AllFriends = () => {
     const [friends, setFriends] = useState([]);
     const [loading, setLoading] = useState(true)
 
-    const totalOnTrack = friends.filter(friend=>friend.status =='On-Track')
-    const totalAlmostDue = friends.filter(friend=>friend.status =='Almost Due')
+    const totalOnTrack = friends.filter(friend=>friend.status =='on-track')
+    const totalAlmostDue = friends.filter(friend=>friend.status =='almost due')
 
     useEffect(()=>{
         fetch('/friends.json').then(res=>res.json()).then(data=>{
