@@ -14,7 +14,7 @@ const FriendCard = ({friend}) => {
                                 
                     }
                 </span>
-                <span className={`${ friend.status =='Overdue'? 'bg-[#EF4444]':friend.status =='On-Track'?'bg-[#244D3F]':'bg-[#EFAD44]'} text-white text-xs font-bold px-3 py-1 rounded-full tracking-wider`}>{friend.status}</span>
+                <span className={`${ friend.status =='overdue'? 'bg-[#EF4444]':friend.status =='on-track'?'bg-[#244D3F]':'bg-[#EFAD44]'} text-white text-xs font-bold px-3 py-1 rounded-full capitalize`}>{friend.status}</span>
             </div>
         </Link>
     );

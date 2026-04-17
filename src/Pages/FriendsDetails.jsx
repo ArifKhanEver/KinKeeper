@@ -44,7 +44,7 @@ const FriendsDetails = () => {
                                 
                             </div>
                             <p className="text-slate-500 italic text-sm">{bio}</p>
-                            <p className="mt-2 text-slate-400 text-[11px]">Preferred: {email}</p>
+                            <p className="mt-2 text-gray-700 text-[14px] font-medium">Mail: {email}</p>
                         </div>
 
                         {/* Buttons */}

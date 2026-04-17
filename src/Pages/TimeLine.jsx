@@ -10,10 +10,9 @@ const TimeLine = () => {
     const {activityData} = useContext(MyContext);
     const [filteredType, setFilteredType] = useState('');
 
-    const displayData = filteredType? activityData.filter(data=>data.activity === filteredType):activityData
+    const displayData = filteredType? filteredType === 'Filter timeline'? activityData: activityData.filter(data=>data.activity === filteredType):activityData;
 
 
-    console.log(filteredType)
     return (
         <div className='bg-[#F8FAFC]'>
            <div className="max-w-4xl mx-auto p-8 min-h-screen font-sans">
@@ -35,7 +34,7 @@ const TimeLine = () => {
 
                 <div className="space-y-4 mb-8">
                     {
-                        displayData.length === 0? <h2 className='text-2xl font-bold grid place-content-center h-[30vh]'>Add Some activity</h2>: displayData.map((data, index) => <div key={index} className="group flex items-center gap-6 p-5 border-1 border-gray-200 rounded-lg bg-white hover:bg-blue-50 hover:border-blue-500 transition-all duration-300">
+                        displayData.length === 0? <h2 className='text-2xl font-bold grid place-content-center h-[30vh]'>Add Some activity first</h2>: displayData.map((data, index) => <div key={index} className="group flex items-center gap-6 p-5 border-1 border-gray-200 rounded-lg bg-white hover:bg-blue-50 hover:border-blue-500 transition-all duration-300">
                             <div className="w-12 h-12 flex items-center justify-center text-2xl bg-gray-50 rounded-lg border border-gray-100 group-hover:scale-110 transition-transform">
                             {data.activity == "Call"? <FiPhoneCall />:data.activity == "Text"?<LuMessageSquareMore />:<IoMdVideocam />}
                             </div>

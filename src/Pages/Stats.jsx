@@ -11,7 +11,6 @@ const Stats = () => {
     const calls = activityData.filter(data=> data.activity =="Call");
     const texts = activityData.filter(data=> data.activity =="Text");
     const videos = activityData.filter(data=> data.activity =="Video");
-    console.log('calls',calls, 'text',`${texts.length}`,'videos',videos)
 
     const data = [
     {name:"Call", value:calls.length, fill:'#7f37f5'},
@@ -35,7 +34,7 @@ const Stats = () => {
 
                     <div className='w-full h-[250px]'>
                         {
-                            calls.length === 0 && texts.length === 0 && videos.length === 0? <h2 className='text-2xl font-bold grid place-content-center h-[30vh]'>Add Some activity</h2>:
+                            calls.length === 0 && texts.length === 0 && videos.length === 0? <h2 className='text-2xl font-bold grid place-content-center h-[30vh]'>Add Some activity first</h2>:
                         <ResponsiveContainer width="100%" height="100%">
                             <PieChart>
                                 <Pie
